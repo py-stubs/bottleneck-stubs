@@ -25,7 +25,7 @@ This allow dynamic type detection, so you can know know your in-> out results. I
 Now your app take 2x more memory because a silent float32->float64 has been done at step 65/129 in your pipeline. 
 
 ## Example
-
+**Edit: I just realized that I don't even know how to instanciate ndarrays correctly (or my sleep schedule is too messed up), because I passed the list as the shape, so the arrays were filled with unrelated values. However the "dtype" arg is what concerns us here so it doesn't matter too much.
 ### No type hints problem
 Even if bottleneck doesn't spam pylance with errors anymore, and you get nice autocomplete + funcs signatures at dev time, you still need to use types hints from the numpy typing package to make it work correctly:
 ```python
