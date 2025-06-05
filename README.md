@@ -7,7 +7,7 @@ This project is managed with UV. If you have it, simply run:
 
 ## How to use
 This is just a stub package, who will allow type checking with pylance, and (most likely) mypy, pyright etc.. I don't use those so idk.
-Since bottleneck recommand to use float and int 32/64 (because all others types aren't speeded up), all other types will warn about typing errors. All funcs are, so far, implemented like that:
+Since bottleneck recommend to use float and int 32/64 (because all others types aren't speeded up by the library), all other dtypes will warn about typing errors. All funcs are, so far, implemented like that:
 ```python
 @overload
 def move_mean(
