@@ -1,5 +1,6 @@
 from numpy.typing import NDArray
 import numpy as np
+
 type IntScalar = np.int32 | np.int64
 type FloatScalar = np.float32 | np.float64
 type Float64OutScalar = IntScalar | np.float64
