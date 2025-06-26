@@ -6,6 +6,7 @@ Provide dynamic types stubs for every function, as well as package level documen
 
 Useful links:
 https://bottleneck.readthedocs.io/en/latest/
+
 https://github.com/pydata/bottleneck
 
 
