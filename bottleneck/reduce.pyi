@@ -3,12 +3,7 @@ from typing import overload
 import numpy as np
 from numpy.typing import NDArray
 
-from bottleneck.types import (
-    Float64OutArray,
-    Float64OutScalar,
-    NumericArray,
-    NumericScalar,
-)
+from bottleneck._types import IntArray, IntScalar, NumericArray, NumericScalar
 
 @overload
 def nansum[T: NumericScalar](a: NDArray[T], axis: int) -> NDArray[T]: ...
@@ -18,13 +13,13 @@ def nansum[T: NumericScalar](a: NDArray[T], axis: None = None) -> T: ...
 def nanmean(a: NDArray[np.float32], axis: int) -> NDArray[np.float32]: ...
 @overload
 def nanmean(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     axis: int,
 ) -> NDArray[np.float64]: ...
 @overload
 def nanmean(a: NDArray[np.float32], axis: None = None) -> np.float32: ...
 @overload
-def nanmean[T: Float64OutScalar](
+def nanmean[T: IntScalar | np.float64](
     a: NDArray[T],
     axis: None = None,
 ) -> T: ...
@@ -32,28 +27,28 @@ def nanmean[T: Float64OutScalar](
 def nanstd(a: NDArray[np.float32], axis: int, ddof: int = 0) -> NDArray[np.float32]: ...
 @overload
 def nanstd(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     axis: int,
     ddof: int = 0,
 ) -> NDArray[np.float64]: ...
 @overload
 def nanstd(a: NDArray[np.float32], axis: None = None, ddof: int = 0) -> np.float32: ...
 @overload
-def nanstd[T: Float64OutScalar](
+def nanstd[T: IntScalar | np.float64](
     a: NDArray[T], axis: None = None, ddof: int = 0
 ) -> T: ...
 @overload
 def nanvar(a: NDArray[np.float32], axis: int, ddof: int = 0) -> NDArray[np.float32]: ...
 @overload
 def nanvar(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     axis: int,
     ddof: int = 0,
 ) -> NDArray[np.float64]: ...
 @overload
 def nanvar(a: NDArray[np.float32], axis: None = None, ddof: int = 0) -> np.float32: ...
 @overload
-def nanvar[T: Float64OutScalar](
+def nanvar[T: IntScalar | np.float64](
     a: NDArray[T], axis: None = None, ddof: int = 0
 ) -> T: ...
 @overload
@@ -74,13 +69,13 @@ def nanmax[T: NumericScalar](
 def median(a: NDArray[np.float32], axis: int) -> NDArray[np.float32]: ...
 @overload
 def median(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     axis: int,
 ) -> NDArray[np.float64]: ...
 @overload
 def median(a: NDArray[np.float32], axis: None = None) -> np.float32: ...
 @overload
-def median[T: Float64OutScalar](
+def median[T: IntScalar | np.float64](
     a: NDArray[T],
     axis: None = None,
 ) -> T: ...
@@ -88,20 +83,20 @@ def median[T: Float64OutScalar](
 def nanmedian(a: NDArray[np.float32], axis: int) -> NDArray[np.float32]: ...
 @overload
 def nanmedian(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     axis: int,
 ) -> NDArray[np.float64]: ...
 @overload
 def nanmedian(a: NDArray[np.float32], axis: None = None) -> np.float32: ...
 @overload
-def nanmedian[T: Float64OutScalar](
+def nanmedian[T: IntScalar | np.float64](
     a: NDArray[T],
     axis: None = None,
 ) -> T: ...
 @overload
-def ss[T: Float64OutScalar](a: NDArray[T], axis: int) -> NDArray[T]: ...
+def ss[T: IntScalar | np.float64](a: NDArray[T], axis: int) -> NDArray[T]: ...
 @overload
-def ss[T: Float64OutScalar](
+def ss[T: IntScalar | np.float64](
     a: NDArray[T],
     axis: None = None,
 ) -> T: ...

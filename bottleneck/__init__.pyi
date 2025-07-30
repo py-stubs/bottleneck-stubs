@@ -61,16 +61,13 @@ Functions that operate along a (1d) moving window.
 
 - IntScalar: Represents a scalar integer, which can be either `np.int32` or `np.int64`.
 - FloatScalar: Represents a scalar floating-point number, which can be either `np.float32` or `np.float64`.
-- Float64OutScalar: Represents a scalar that can be either an integer (`np.int32` or `np.int64`) or a `np.float64` floating-point number.
 - NumericScalar: Represents a scalar that can be either an integer (`np.int32` or `np.int64`) or a floating-point number (`np.float32` or `np.float64`).
 - IntArray: Represents a NumPy array of integers, which can contain elements of type `np.int32` or `np.int64`.
 - FloatArray: Represents a NumPy array of floating-point numbers, which can contain elements of type `np.float32` or `np.float64`.
-- Float64OutArray: Represents a NumPy array that can contain elements of type `np.float64` or integers (`np.int32` or `np.int64`).
 - NumericArray: Represents a NumPy array that can contain elements of type `np.int32`, `np.int64`, `np.float32`, or `np.float64`.
 
 These type aliases are purely internal for bottleneck type stubs writing convenience.
 
-The "Out" types are implemented to avoid writing lengthy unions for each func that can accept int or float array, but will anyways return a float64 array.
 """
 
 from bottleneck.move import (

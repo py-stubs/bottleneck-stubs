@@ -6,12 +6,12 @@ Provide dynamic types stubs for every function, as well as package level documen
 
 Useful links:
 
-https://bottleneck.readthedocs.io/en/latest/
+<https://bottleneck.readthedocs.io/en/latest/>
 
-https://github.com/pydata/bottleneck
-
+<https://github.com/pydata/bottleneck>
 
 ## How to install
+
 This project is managed with UV. If you have it, simply run:
 
     uv add git+https://github.com/OutSquareCapital/bn-typed.git

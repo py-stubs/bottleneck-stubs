@@ -2,7 +2,8 @@ from typing import overload
 
 import numpy as np
 from numpy.typing import NDArray
-from bottleneck.types import Float64OutArray
+
+from bottleneck._types import IntArray
 
 @overload
 def move_mean(
@@ -10,7 +11,7 @@ def move_mean(
 ) -> NDArray[np.float32]: ...
 @overload
 def move_mean(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     window: int,
     min_count: int | None = None,
     axis: int = -1,
@@ -21,7 +22,7 @@ def move_median(
 ) -> NDArray[np.float32]: ...
 @overload
 def move_median(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     window: int,
     min_count: int | None = None,
     axis: int = -1,
@@ -32,7 +33,7 @@ def move_max(
 ) -> NDArray[np.float32]: ...
 @overload
 def move_max(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     window: int,
     min_count: int | None = None,
     axis: int = -1,
@@ -43,7 +44,7 @@ def move_min(
 ) -> NDArray[np.float32]: ...
 @overload
 def move_min(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     window: int,
     min_count: int | None = None,
     axis: int = -1,
@@ -54,7 +55,7 @@ def move_sum(
 ) -> NDArray[np.float32]: ...
 @overload
 def move_sum(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     window: int,
     min_count: int | None = None,
     axis: int = -1,
@@ -69,7 +70,7 @@ def move_std(
 ) -> NDArray[np.float32]: ...
 @overload
 def move_std(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     window: int,
     min_count: int | None = None,
     axis: int = -1,
@@ -85,7 +86,7 @@ def move_var(
 ) -> NDArray[np.float32]: ...
 @overload
 def move_var(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     window: int,
     min_count: int | None = None,
     axis: int = -1,
@@ -97,7 +98,7 @@ def move_argmin(
 ) -> NDArray[np.float32]: ...
 @overload
 def move_argmin(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     window: int,
     min_count: int | None = None,
     axis: int = -1,
@@ -108,7 +109,7 @@ def move_argmax(
 ) -> NDArray[np.float32]: ...
 @overload
 def move_argmax(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     window: int,
     min_count: int | None = None,
     axis: int = -1,
@@ -119,7 +120,7 @@ def move_rank(
 ) -> NDArray[np.float32]: ...
 @overload
 def move_rank(
-    a: Float64OutArray,
+    a: NDArray[np.float64] | IntArray,
     window: int,
     min_count: int | None = None,
     axis: int = -1,
