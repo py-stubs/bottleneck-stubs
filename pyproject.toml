@@ -3,7 +3,7 @@ name = "bn-typed"
 version = "0.1.5"
 description = "Bottleneck stubs for type checks"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "numpy>=2.2.6",
 ]
