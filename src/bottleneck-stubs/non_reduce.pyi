@@ -3,7 +3,7 @@ from typing import overload
 import numpy as np
 from numpy.typing import NDArray
 
-from bottleneck._types import FloatArray, IntArray, NumericArray
+from ._types import FloatArray, IntArray, NumericArray
 
 @overload
 def replace(a: IntArray, old: int, new: int) -> None: ...

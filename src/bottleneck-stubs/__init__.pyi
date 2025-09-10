@@ -70,7 +70,7 @@ These type aliases are purely internal for bottleneck type stubs writing conveni
 
 """
 
-from bottleneck.move import (
+from .move import (
     move_argmax,
     move_argmin,
     move_max,
@@ -82,7 +82,7 @@ from bottleneck.move import (
     move_sum,
     move_var,
 )
-from bottleneck.non_reduce import (
+from .non_reduce import (
     argpartition,
     nanrankdata,
     partition,
@@ -90,7 +90,7 @@ from bottleneck.non_reduce import (
     rankdata,
     replace,
 )
-from bottleneck.reduce import (
+from .reduce import (
     allnan,
     anynan,
     median,

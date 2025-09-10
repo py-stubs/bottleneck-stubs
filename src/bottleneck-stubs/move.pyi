@@ -3,7 +3,7 @@ from typing import overload
 import numpy as np
 from numpy.typing import NDArray
 
-from bottleneck._types import IntArray
+from ._types import IntArray
 
 @overload
 def move_mean(

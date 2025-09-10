@@ -3,7 +3,7 @@ from typing import overload
 import numpy as np
 from numpy.typing import NDArray
 
-from bottleneck._types import IntArray, IntScalar, NumericArray, NumericScalar
+from ._types import IntArray, IntScalar, NumericArray, NumericScalar
 
 @overload
 def nansum[T: NumericScalar](a: NDArray[T], axis: int) -> NDArray[T]: ...
