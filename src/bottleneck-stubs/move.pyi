@@ -7,14 +7,18 @@ from ._types import IntArray
 
 @overload
 def move_mean(
+    a: NDArray[np.integer],
+    window: int,
+    min_count: int | None = None,
+    axis: int = -1,
+) -> NDArray[np.float64]: ...
+@overload
+def move_mean(
     a: NDArray[np.float32], window: int, min_count: int | None = None, axis: int = -1
 ) -> NDArray[np.float32]: ...
 @overload
 def move_mean(
-    a: NDArray[np.float64] | IntArray,
-    window: int,
-    min_count: int | None = None,
-    axis: int = -1,
+    a: NDArray[np.float64], window: int, min_count: int | None = None, axis: int = -1
 ) -> NDArray[np.float64]: ...
 @overload
 def move_median(

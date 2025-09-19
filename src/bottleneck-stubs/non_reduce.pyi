@@ -6,9 +6,9 @@ from numpy.typing import NDArray
 from ._types import FloatArray, IntArray, NumericArray
 
 @overload
-def replace(a: IntArray, old: int, new: int) -> None: ...
+def replace(a: IntArray, old: int, new: int) -> IntArray: ...
 @overload
-def replace(a: FloatArray, old: float, new: float) -> None: ...
+def replace(a: FloatArray, old: float, new: float) -> FloatArray: ...
 def rankdata(
     a: NumericArray,
     axis: int | None = None,
@@ -40,10 +40,10 @@ def rankdata(
     array([ 1. ,  2.5,  2.5,  4. ])
     >>> bn.rankdata([[0, 2], [2, 3]], axis=0)
     array([[ 1.,  1.],
-           [ 2.,  2.]])
+    [ 2.,  2.]])
     >>> bn.rankdata([[0, 2], [2, 3]], axis=1)
     array([[ 1.,  2.],
-           [ 1.,  2.]])
+    [ 1.,  2.]])
 
 
     """
@@ -82,10 +82,10 @@ def nanrankdata(
     array([ nan,  1.5,  1.5,  3. ])
     >>> bn.nanrankdata([[np.nan, 2], [2, 3]], axis=0)
     array([[ nan,   1.],
-           [  1.,   2.]])
+    [  1.,   2.]])
     >>> bn.nanrankdata([[np.nan, 2], [2, 3]], axis=1)
     array([[ nan,   1.],
-           [  1.,   2.]])
+    [  1.,   2.]])
 
     """
     ...
